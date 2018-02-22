@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
-  root 'events#home'
+  get 'favorites/index'
+
+  get 'favorites/show'
+
+  get 'favorites/new'
+
+  get 'favorites/create'
+
+  get 'favorites/edit'
+
+  get 'favorites/update'
+
+  get 'favorites/destroy'
+
+  root 'users#home'
   resources :users
   resources :favorites
 end

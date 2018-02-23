@@ -1,7 +1,16 @@
 class FavoritesController < ApplicationController
+  helper_method :current_user, :logged_in?
+
+  def logged_in?
+      current_user != nil
+  end
+
+  def current_user
+    @current_user ||= User.find_by_id(session[:user])
+  end
   
-  def home
-    redirect_to new_session_path unless logged_in? 
+  def home 
+    # redirect_to root_path unless logged_in?
   end
   
   def index

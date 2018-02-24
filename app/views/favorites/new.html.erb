@@ -1,2 +1,31 @@
-<h1>Favorites#new</h1>
-<p>Find me in app/views/favorites/new.html.erb</p>
+<h1>Welcome to Favi-App</h1>
+<div class="container1"> 
+    <%= form_for @favorite do |f| %>
+    <div class="row"><legend class="col-md-4 col-md-offset-4">All your favorites, one site</legend></div>
+    <fieldset>
+        </div>
+        <div class="form-group">
+            <%= f.label :title, 'Title', class: 'col-md-4 control-label' %>
+            <div class="col-md-5">
+                <%= f.text_field :title,  class: 'form-control' %>
+            </div>
+        </div>
+        <div class="form-group">
+            <%= f.label :description, 'Description', class: 'col-md-4 control-label' %>
+            <div class="col-md-5">
+                <%= f.text_field :description, class: 'form-control' %>
+            </div>
+        </div>
+            <div class="form-group">
+            <%= f.label :url, 'URL', class: 'col-md-4 control-label' %>
+            <div class="col-md-5">
+                <%= f.text_field :url, class: 'form-control' %>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-8 col-md-offset-4">
+                <%= f.submit "Add New Fav", class: "btn btn-large btn-dark" %>
+            </div>
+        </div>
+    </fieldset>
+<% end %>

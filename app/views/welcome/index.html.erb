@@ -1,5 +1,9 @@
+
+    <%= stylesheet_link_tag "app/assets/stylesheets/index.html.css" %>
 <head>
-    <%= stylesheet_link_tag "public/assets/stylesheets.css/index.html.css" %>
+  	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -7,9 +11,15 @@
         <h2>Time to bookmark all your online favorites!</h2> 
         <h3>Everything you love in one place: books, trips, quotes, images, fashion and more.</h3>
         <br />
-        <button type="button" class="btn btn-dark">Log In</button>
-        
-        <button type="button" class="btn btn-dark">Sign Up</button>
+        <div class="login" 
+            <h2>Log In To Favi App</h2>
+            <br />
+            <a href="/users/:id"><input type="button" value="Log In"></a>
+            <br />
+            <a href="/users/new"><input type="button" value="New? Sign Up!"></a>
+        </div> 
     </div>
 </body>
+
+
 

@@ -1,25 +1,37 @@
 
-    <%= stylesheet_link_tag "app/assets/stylesheets/index.html.css" %>
-<head>
-  	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</head>
-<body>
     <div class="container">
         <h1>FAVI-APP</h1>
         <h2>Time to bookmark all your online favorites!</h2> 
         <h3>Everything you love in one place: books, trips, quotes, images, fashion and more.</h3>
-        <br />
-        <div class="login" 
-            <h2>Log In To Favi App</h2>
-            <br />
-            <a href="/users/:id"><input type="button" value="Log In"></a>
-            <br />
-            <a href="/users/new"><input type="button" value="New? Sign Up!"></a>
-        </div> 
     </div>
-</body>
+    
+    <form class="dropdown-menu p-4">
+        <h3>Log In To Favi App</h3>
+        <div class="form-group">
+            <label for="exampleDropdownFormEmail2">Name</label>
+            <input type="name" class="form-control" id="exampleDropdownFormEmail2" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <label for="exampleDropdownFormEmail2">Email address</label>
+            <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+        </div>
+        <div class="form-group">
+            <label for="exampleDropdownFormPassword2">Password</label>
+            <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+            <label class="form-check-label" for="dropdownCheck2">
+                Remember me
+            </label>
+        </div>
+            <a href="/users/:id"><input type="button" value="Log In"></a>
+    </form>
+    
+    <div>
+        <a href="/users/new"><input type="button" value="New? Sign Up!"></a>
+    </div>
+
 
 
 

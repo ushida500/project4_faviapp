@@ -2,10 +2,10 @@
 <p>Find me in app/views/users/show.html.erb</p>
 
 
-<%= link_to "create favorite", new_favorite_path  %>
+<%= link_to "Add New Fav", new_favorite_path  %>
 
 <div class="footer">
-		<%= link_to("Go Back", users_path) %>
-		<%= link_to("Edit", edit_user_path(@user)) %>
-		<%= link_to("Delete", user_path(@user), method: "delete", data: {confirm: "Are you sure?"}) %>
+	<%= link_to("Go Back", users_path) %>
+	<%= link_to("Edit", edit_user_path(@user)) %>
+	<%= link_to("Delete", user_path(@user), method: "delete", data: {confirm: "Are you sure?"}) %>
 </div>

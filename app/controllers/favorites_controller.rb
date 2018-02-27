@@ -1,13 +1,4 @@
 class FavoritesController < ApplicationController
-  helper_method :current_user, :logged_in?
-
-  def logged_in?
-      current_user != nil
-  end
-
-  def current_user
-    @current_user ||= User.find_by_id(session[:user])
-  end
   
   def home 
     # redirect_to root_path unless logged_in?
@@ -27,8 +18,12 @@ class FavoritesController < ApplicationController
   def create
     @favorite = Favorite.new(favorite_params)
     @favorite.user = current_user
-    @favorite.save
+    p current_user
+    if @favorite.save
       redirect_to favorites_path
+    else
+      redirect_to new_favorite_path
+    end
   end
 
   def edit

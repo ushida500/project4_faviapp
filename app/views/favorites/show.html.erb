@@ -1,7 +1,11 @@
 <h1>All Your Favorites</h1>
 
-<%= image_tag(@favorite.url) %>
-<h3>: <%= @favorite.title %></h3>
-<h3>: <%= @favorite.description %></h3>
-<h3>: <%= @favorite.url %></h3>
+<%=# image_tag(@favorite.url) %>
+
+<h2><%= @favorite.title %></h2>
+<h3>Description: <%= @favorite.description %></h3>
+<h3><%= @favorite.url %></h3>
+
+
+
 

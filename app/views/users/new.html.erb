@@ -1,3 +1,4 @@
+
 <div class = container>
     <%= form_for @user, :html => {class: 'new_user form-horizontal'} do |f| %>
     <div class="row">
@@ -29,6 +30,7 @@
             <%= f.password_field :password_confirmation, class: 'form-control' %>
             </div>
         </div>
+        <br />
         <div class="form-group">
             <div class="col-md-8 col-md-offset-4">
             <%= f.submit 'Create Account', class: 'btn btn-dark' %>

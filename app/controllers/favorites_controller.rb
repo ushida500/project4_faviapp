@@ -9,6 +9,7 @@ class FavoritesController < ApplicationController
   end
 
   def show
+    @favorite = Favorite.find(params[:id])
   end
 
   def new
@@ -33,7 +34,7 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
-    @favorite = favorite.find(params[:id])
+    @favorite = Favorite.find(params[:id])
     if @favorite.destroy
       redirect_to root_path
       flash[:alert] = "Favorite deleted"
@@ -42,7 +43,7 @@ class FavoritesController < ApplicationController
 
   private
   def favorite_params
-    params.require(:favorite).permit(:title, :description, :url)
+    params.require(:favorite).permit(:title, :description, :url, :image_url)
   end
 end
 

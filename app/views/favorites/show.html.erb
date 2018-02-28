@@ -1,10 +1,15 @@
-<h1>All Your Favorites</h1>
-
-<%=# image_tag(@favorite.url) %>
-
-<h2><%= @favorite.title %></h2>
+<h1><%= @favorite.title %></h1>
 <h3>Description: <%= @favorite.description %></h3>
-<h3><%= @favorite.url %></h3>
+<%=image_tag(@favorite.image_url) %>
+<%= link_to("Website", @favorite.url) %>
+
+<div class="footer">
+	<%= button_to("Go Back", favorites_path) %>
+	<%= button_to("Edit", edit_favorite_path(@favorite)) %>
+	<%= button_to("Delete", favorite_path(@favorite), method: "delete", data: {confirm: "Are you sure?"}) %>
+</div>
+
+
 
 
 
